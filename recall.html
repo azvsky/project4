@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sedona:Форма Отзыва</title>
+    <meta name="description" content="Оставив свой отзыв Вы поможете нашим отелям стать лучше">
+    <meta name="keywords" content="Отзыв, оставить отзыв, форма ответа">
+    <meta property="og:title" content="Sedona:Форма Отзыв">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Оставив свой отзыв Вы поможете нашим отелям стать лучше">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic-ext" rel="stylesheet">
+  </head>
+  <body class="recall-body">
+    <div class="container">
+      <header class="page-header">
+        <nav class="main-navigation">
+          <svg class="main-navigation__close">
+            <use xlink:href="img/symbols.svg#icon-cross"></use>
+          </svg>  
+          <ul class="main-navigation__list">
+            <li class="main-navigation__list-item">
+              <a class="main-navigation__list-item-link" href="index.html">Главная</a>
+            </li>
+            <li class="main-navigation__list-item">
+              <a class="main-navigation__list-item-link" href="photo.html">Фото и Видео</a>
+            </li>
+            <li class="main-navigation__list-item  main-navigation__list-item--hidden">
+              <a class="main-navigation__list-item-link main-navigation__list-item-link--hidden" href="index.html">
+                <img class="main-navigation__list-item-img--hidden" src="pic/logo-sedona@1xnew.png" alt="Логотип Седоны" width="102" height="83"> Логотип Седоны
+              </a>
+            </li>
+            <li class="main-navigation__list-item  main-navigation__item--hidden">
+              <a class="main-navigation__list-item-link" href="#">Форма отзыва</a>
+            </li>
+            <li class="main-navigation__list-item  main-navigation__item--hidden">
+              <a class="main-navigation__list-item-link" href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="index-logo  index-logo--hidden">
+          <a class=" index-logo__link" href="index.html">
+            <img class="index-logo__link-img" src="pic/logo-sedona@1xnew.png" alt="Логотип Седоны" width="102" height="83">Логотип
+          </a>
+          <svg class="index-logo__open">
+            <use xlink:href="img/symbols.svg#icon-menu"></use>
+          </svg>
+        </div>
+        <div class="greeting-text">
+          <svg class="greeting-text__title">
+            <use xlink:href="img/symbols.svg#text-sedona"></use>
+          </svg>
+        </div>
+      </header>
+      <main>
+        <div class="offer">
+          <h2 class="offer__title">Оставьте свой отзыв</h2>
+          <p class="offer__description">Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещённых Вами достропримечательностях</p>
+        </div>
+        <form class="recall" action="/echo" method="post">
+          <div class="wrapOne">
+            <div class="recall__represent">
+              <h2 class="recall__represent-title">Представьтесь пожалуйста</h2>
+              <label for="recall__represent-surname">Фамилия:
+                <input class="recall__represent-surname" id="recall__represent-surname" type="text" placeholder="Фамилия" name="">
+              </label>
+              <label for="recall__represent-name">Имя:
+                <input class="recall__represent-name" id="recall__represent-name" type="text" name="" placeholder="Имя">
+              </label>
+              <label for="recall__represent-patronymic">Отчество:
+                <input class="recall__represent-patronymic" id="recall__represent-patronymic" type="text" placeholder="Отчество" name="" pattern="[а-яА-ЯёЁa-zA-Z]+$ ">
+              </label>
+            </div>
+            <div class="recall__contact">
+              <h2 class="recall__contact-title">Контактная информация:</h2>
+              <label for="recall__contact-tel">Контактный телефон:</label>
+              <div class="recall__contact-wrap-tel">
+                <input class="recall__contact-tel" type="tel" name="" id="recall__contact-tel" placeholder="2-xxx-xxx" pattern="2-[0-9]{3}-[0-9]{3}">
+              </div>
+              <label for="recall__contact-email">Электронная почта:</label>
+              <div class="recall__contact-wrap-email">
+                <input class="recall__contact-email" type="email" name="" id="recall__contact-email"  pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" autocomplete="off" placeholder="Ждём e-mail!">
+              </div>
+            </div>
+          </div>
+          <div class="wrapTwo">
+            <div class="recall__impression">
+              <h2 class="recall__impression-title">Ваше общее впечатление:</h2>
+              <input class="recall__impression-positive" type="radio" name="impression" id="recall__impression-positive" value="positive" checked>
+              <label for="recall__impression-positive">Скорее положительное</label>
+              <input class="recall__impression-negative" type="radio" name="impression" id="recall__impression-negative" value="negative">
+              <label for="recall__impression-negative">Скорее отрицательное</label>
+              <input class="recall__impression-difficult" type="radio" name="impression" id="recall__impression-difficult" value="difficulToAanswer">
+              <label for="recall__impression-difficult">Скорее отрицательное</label>
+            </div>
+            <div class="recall__lions">
+              <h2 class="recall__lions-title">Посещенные достропримечательности:</h2>
+              <input class="recall__lions-name" type="checkbox" name="Devil's Bridge" id="devilBridge">
+              <label for="devilBridge">Devil's Bridge</label>
+              <input class="recall__lions-name" type="checkbox" name="slidePark" id="slidePark" checked>
+              <label for="slidePark">Slide Park</label>
+              <input class="recall__lions-name" type="checkbox" name="bellRock" id="bellRock">
+              <label for="bellRock">Bell Rock</label>
+              <input class="recall__lions-name" type="checkbox" name="redRocks" id="redRocks">
+              <label for="redRocks">Red Rocks</label>
+            </div>
+          </div>
+          <div class="recall__emotions">
+            <h2 class="recall__emotions-title">Опишите свои эмоции:</h2>
+            <textarea class="recall__emotions-field" name="recall__emotions-field" placeholder="Не стесняйтесь!"></textarea>
+          </div>
+          <button class="recall__submit">Отправить отзыв</button>
+        </form>
+      </main>
+      <footer class="main-footer">
+        <div class="footer-wrapIn">
+          <div class="hashtag">&#35visitsedona</div>
+          <div class="social">
+            <a class="social__link-fb" href="https://ru-ru.facebook.com/">
+              <svg class="social__link-fb-icon">
+                <use xlink:href="img/symbols.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a class="social__link-tw" href="https://twitter.com/">
+              <svg class="social__link-tw-icon">
+                <use xlink:href="img/symbols.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a class="social__link-yout" href="https://www.youtube.com/?gl=RU&hl=ru">
+              <svg class="social__link-yout-icon">
+                <use xlink:href="img/symbols.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="developer">
+            <p class="developer__text">Разработано 
+              <a href="https://htmlacademy.ru" class="developer__link">
+                <svg class="developer__link-icon">
+                  <use xlink:href="img/symbols.svg#logo-htmlacademy"></use>
+                </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/working.js"></script>
+  </body>
+</html>
